@@ -1,7 +1,9 @@
+
 const mysql = require("mysql");
 
 let connection;
 
+// if deployed use Heroku db otherwise use localhost
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
@@ -15,4 +17,5 @@ else {
   });
 }
 
+// make avaible else where
 module.exports = connection;
