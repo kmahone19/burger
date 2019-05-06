@@ -1,6 +1,6 @@
 
 const mysql = require("mysql");
-
+require('dotenv').config();
 let connection;
 
 // if deployed use Heroku db otherwise use localhost

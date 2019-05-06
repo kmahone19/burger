@@ -26,7 +26,7 @@ module.exports = app => {
 
   // route to update exsisting burgers
   app.put("/api/burgers/:id", function(req, res){
-    burger.update(req.body.devoure, req.params.id)
+    burger.update(req.body.devoured, req.params.id)
       .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);

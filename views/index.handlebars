@@ -8,9 +8,9 @@
   <div class="row">
     <div class="col-12 col-md-3">
       {{!-- new burger sumbision --}}
-      <form id="burger-form">
+      <form>
         <input id="name" class="form-control" placeholder="Burger Name">
-        <button class="btn btn-block" type="submit">Add Burger!</button>
+        <button class="btn btn-block" id="submit" type="submit">Add Burger!</button>
       </form>
     </div>
     <div class="col-12 col-md-9">
@@ -25,7 +25,7 @@
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoure="false" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="false" class="btn btn-sm eat-burger">
                   Eat Burger!
                 </button>
               </span>
@@ -40,11 +40,11 @@
           {{!-- burgers not eatn  --}}
           <ul class="list-group">
             {{#each burgerData}}
-            {{<div id="if"></div> devoure}}
+            {{#if devoure}}
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoure="false" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="true" class="btn btn-sm eat-burger">
                   Make Another One!
                 </button>
               </span>
@@ -57,3 +57,5 @@
     </div>
   </div>
 </div>
+
+<script src="../public/burger.js"></script>
