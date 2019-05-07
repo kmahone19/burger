@@ -14,7 +14,6 @@ $(document).ready(function() {
       method: "POST",
       data: burgerData
     }).then(function () {
-      console.log("this runs")
       location.reload();
     }).catch(
       err => console.log(err)

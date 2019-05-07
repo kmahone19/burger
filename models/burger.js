@@ -35,7 +35,7 @@ const update = (devouredValue, burgerId) => {
     devouredValue = (devouredValue === "true") ?
       true : false;
 
-    connection.query("UPDATE burger SET devoured = ? WHERE id=?", [burgerId], function (err, dbBurgerData) {
+    connection.query("UPDATE burger SET devoured = ? WHERE id = ?", [devouredValue, burgerId], function (err, dbBurgerData) {
       if (err) {
         return reject(err);
       } else if (dbBurgerData.affectedRows === 0) {

@@ -21,11 +21,11 @@
           {{!-- burgers to eat --}}
           <ul class="list-group">
             {{#each burgerData}}
-            {{#unless devoure}}
+            {{#unless devoured}}
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoured="false" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="true" class="btn btn-sm eat-burger">
                   Eat Burger!
                 </button>
               </span>
@@ -40,11 +40,11 @@
           {{!-- burgers not eatn  --}}
           <ul class="list-group">
             {{#each burgerData}}
-            {{#if devoure}}
+            {{#if devoured}}
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoured="true" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="false" class="btn btn-sm eat-burger">
                   Make Another One!
                 </button>
               </span>
@@ -57,5 +57,3 @@
     </div>
   </div>
 </div>
-
-<script src="../public/burger.js"></script>
