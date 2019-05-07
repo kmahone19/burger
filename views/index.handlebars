@@ -1,5 +1,5 @@
 {{!-- header --}}
-<div class="jumbotron jumbotron-fluid p-5">
+<div class="jumbotron jumbotron-fluid bg-warning p-5">
   <h1> Burger App!</h1>
 </div>
 
@@ -10,7 +10,7 @@
       {{!-- new burger sumbision --}}
       <form>
         <input id="name" class="form-control" placeholder="Burger Name">
-        <button class="btn btn-block" id="submit" type="submit">Add Burger!</button>
+        <button class="btn btn-block bg-danger text-white" id="submit" type="submit">Add Burger!</button>
       </form>
     </div>
     <div class="col-12 col-md-9">
@@ -25,7 +25,7 @@
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoured="true" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="true" class="btn btn-sm eat-burger bg-danger text-white">
                   Eat Burger!
                 </button>
               </span>
@@ -44,7 +44,7 @@
             <li class="list-group-item d-flex">
               {{burger_name}}
               <span class="ml-auto">
-                <button data-id="{{id}}" data-devoured="false" class="btn btn-sm eat-burger">
+                <button data-id="{{id}}" data-devoured="false" class="btn btn-sm eat-burger bg-warning">
                   Make Another One!
                 </button>
               </span>
